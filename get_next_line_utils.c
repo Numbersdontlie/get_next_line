@@ -6,40 +6,19 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 17:31:45 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/08/25 12:53:05 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/08/27 13:21:40 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char	*ft_strchr(char *s, int c)
-{
-	char	*result;
-
-	result = NULL;
-	while(*s)
-	{
-		if (*s == (char)c)
-		{
-			result = ((char *)s);
-			return (result);
-		}
-		s++;
-	}
-	if ((*s == '\0') && ((char)c == '\0'))
-		return ((char *)s);
-	return (0);
-}
-
 char	*ft_strdup(char *s)
 {
 	char	*result;
-	size_t	i;
 
 	result = (char *)malloc(ft_strlen(s) + 1);
 	if (result == NULL)
 		return (NULL);
-	i = 0;
 	while (*s)
 	{
 		*result = *s;
@@ -47,7 +26,7 @@ char	*ft_strdup(char *s)
 		s++;
 	}
 	*result = '\0';
-	return(result);
+	return (result);
 }
 
 size_t	ft_strlen(char *s)
