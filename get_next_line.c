@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 12:00:38 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/08/27 23:00:07 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/08/29 00:51:01 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-char	*fill_line_buffer(int fd, char *left_c, char *buffer)
+static char	*fill_line_buffer(int fd, char *left_c, char *buffer)
 {
 	char	*temp;
 	ssize_t	b_read;
@@ -76,6 +76,7 @@ static char	*set_line(char *line_buffer)
 	char	*left_c;
 	ssize_t	i;
 
+	i = 0;
 	while (line_buffer[i] != '\n' && line_buffer[i] != '\0')
 		i++;
 	if (line_buffer[i] == '\0' || line_buffer[1] == '\0')
