@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 12:00:38 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/08/27 23:00:07 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/08/30 11:42:49 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-char	*fill_line_buffer(int fd, char *left_c, char *buffer)
+static char	*fill_line_buffer(int fd, char *left_c, char *buffer)
 {
 	char	*temp;
 	ssize_t	b_read;
@@ -76,6 +76,7 @@ static char	*set_line(char *line_buffer)
 	char	*left_c;
 	ssize_t	i;
 
+	i = 0;
 	while (line_buffer[i] != '\n' && line_buffer[i] != '\0')
 		i++;
 	if (line_buffer[i] == '\0' || line_buffer[1] == '\0')
@@ -108,3 +109,29 @@ static char	*ft_strchr(char *s, int c)
 		return ((char *)s);
 	return (0);
 }
+
+/*#include <stdio.h>
+
+int	main()
+{
+	int	fd; 
+
+	fd = open("test.txt", O_RDONLY);
+	printf("GNL 1: %s", get_next_line(fd));
+	printf("GNL 2: %s", get_next_line(fd));
+	printf("GNL 3: %s", get_next_line(fd));
+	printf("GNL 4: %s", get_next_line(fd));
+	printf("GNL 5: %s", get_next_line(fd));
+	printf("GNL 6: %s", get_next_line(fd));
+	printf("GNL 7: %s", get_next_line(fd));
+	printf("GNL 8: %s", get_next_line(fd));
+	printf("GNL 9: %s", get_next_line(fd));
+	printf("GNL 10: %s", get_next_line(fd));
+	printf("GNL 11: %s", get_next_line(fd));
+	printf("GNL 12: %s", get_next_line(fd));
+	printf("GNL 13: %s", get_next_line(fd));
+	printf("GNL 14: %s", get_next_line(fd));
+	printf("GNL 15: %s", get_next_line(fd));
+	printf("GNL 16: %s", get_next_line(fd));
+	close(fd);
+}*/
