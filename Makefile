@@ -24,3 +24,10 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+
+SRCSBNS = get_next_line_bonus.c get_next_line_utils_bonus.c
+
+OBJSBNS = ${SRCSBNS:.c=.o}
+
+bonus: $(OBJSBNS)
+		ar rcs $(NAME) $(OBJSBNS) get_next_line_bonus.h
