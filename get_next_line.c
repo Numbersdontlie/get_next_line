@@ -6,7 +6,7 @@
 /*   By: lperez-h <lperez-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 12:00:38 by lperez-h          #+#    #+#             */
-/*   Updated: 2023/08/29 00:51:01 by lperez-h         ###   ########.fr       */
+/*   Updated: 2023/08/30 12:10:29 by lperez-h         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,3 +109,29 @@ static char	*ft_strchr(char *s, int c)
 		return ((char *)s);
 	return (0);
 }
+
+/*#include <stdio.h>
+
+int	main()
+{
+	int	fd; 
+
+	fd = open("test.txt", O_RDONLY);
+	printf("GNL 1: %s", get_next_line(fd));
+	printf("GNL 2: %s", get_next_line(fd));
+	printf("GNL 3: %s", get_next_line(fd));
+	printf("GNL 4: %s", get_next_line(fd));
+	printf("GNL 5: %s", get_next_line(fd));
+	printf("GNL 6: %s", get_next_line(fd));
+	printf("GNL 7: %s", get_next_line(fd));
+	printf("GNL 8: %s", get_next_line(fd));
+	printf("GNL 9: %s", get_next_line(fd));
+	printf("GNL 10: %s", get_next_line(fd));
+	printf("GNL 11: %s", get_next_line(fd));
+	printf("GNL 12: %s", get_next_line(fd));
+	printf("GNL 13: %s", get_next_line(fd));
+	printf("GNL 14: %s", get_next_line(fd));
+	printf("GNL 15: %s", get_next_line(fd));
+	printf("GNL 16: %s", get_next_line(fd));
+	close(fd);
+}*/
